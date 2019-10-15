@@ -1,0 +1,23 @@
+{
+  "name": "nkoa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finmily/nkoa.git"
+  },
+  "keywords": [
+    "koa",
+    "web"
+  ],
+  "author": "fanbaolin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/finmily/nkoa/issues"
+  },
+  "homepage": "https://github.com/finmily/nkoa#readme"
+}
