@@ -1,0 +1,32 @@
+#vim
+*~
+*.sw?
+
+# python
+*.pyc
+
+# misc editing tools
+.vscode/
+.idea/
+tags
+
+#mac
+*.DS_Store
+
+# build tools
+node_modules/
+typings/
+
+# logfiles
+*.log
+.history
+
+# non-example config files
+runtime_configs/remote.stripes.json
+runtime_configs/migrate.tiger.json
+
+# build artifacts
+build/
+
+# coverage report
+coverage

@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node ./build/index.js",
+    "build": "tsc --noEmitOnError --baseUrl src",
+    "build_watch": "npm run build -- --watch --pretty",
+    "start_watch": "npm run build_watch & npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/finmily/nkoa/issues"
   },
-  "homepage": "https://github.com/finmily/nkoa#readme"
+  "homepage": "https://github.com/finmily/nkoa#readme",
+  "dependencies": {
+    "@types/koa": "^2.0.50",
+    "koa": "^2.10.0",
+    "koa-router": "^7.4.0"
+  }
 }
