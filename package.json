@@ -7,6 +7,8 @@
     "start": "node ./build/index.js",
     "build": "tsc --noEmitOnError --baseUrl src",
     "build_watch": "npm run build -- --watch --pretty",
+    "inspect": "kill-port --port 9229 && DEBUG_MODE=true node --inspect=0.0.0.0:9229 build/index.js",
+    "local_start_watch_inspect": "TIGER_CONFIG=../runtime_configs/dev.local.json nodemon --delay 80ms --watch build/ build/index.js --exec 'npm run inspect'",
     "start_watch": "npm run build_watch & npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,6 +28,7 @@
   "homepage": "https://github.com/finmily/nkoa#readme",
   "dependencies": {
     "@types/koa": "^2.0.50",
+    "kill-port": "^1.6.0",
     "koa": "^2.10.0",
     "koa-router": "^7.4.0"
   }
