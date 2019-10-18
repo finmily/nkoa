@@ -1,3 +1,8 @@
+
+
+import * as Router from "koa-router"
+export const router = new Router();
+
 export enum HttpMethod {
   HEAD,
   OPTIONS,
@@ -9,17 +14,18 @@ export enum HttpMethod {
   ALL,
 }
 
-export function route(path: string) {
+export function Route(path: string, method: HttpMethod) {
   return function(target: any, key: any, descriptor: any) {
     const func = descriptor.value;
-    console.log("descriptor", func)
+
     descriptor.value = (...args: any[]) => {
-      try {
-        func.apply(target, args)
-        console.log(`greet successfully!`)
-    } catch (err) {
-        console.log(`greet error : ${err}`)
-    }
+      router.get(path, (ctx, next) => {
+        ctx.body = func.call(args)
+      });
     }
   }
+}
+
+export function GetMapping(path: string) {
+  Route(path, HttpMethod.GET)
 }
