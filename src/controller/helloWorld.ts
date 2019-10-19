@@ -1,7 +1,7 @@
-import { Route, HttpMethod } from "../decorators/router"
+import {Route, HttpMethod, GetMapping} from "../decorators/router"
 
 export class helloController {
-  @Route("/test", HttpMethod.GET)
+  @GetMapping("/test")
   hello(): String {
     return "hello world"
   }
