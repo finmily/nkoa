@@ -29,7 +29,7 @@
   "dependencies": {
     "@types/koa": "^2.0.50",
     "kill-port": "^1.6.0",
-    "koa": "^2.10.0",
+    "koa": "^2.16.1",
     "koa-router": "^7.4.0"
   }
 }
